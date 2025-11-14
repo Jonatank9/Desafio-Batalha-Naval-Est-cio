@@ -15,7 +15,19 @@ int main() {
         }
     }
 
+        // Posicionamento de dois navios com valor 3 na matriz
+    for (int i = 3; i < 6; i++) {
+        tabuleiro[2][i] = 3; // Navio horizontal na linha 3, colunas D a F
+    }
+
+    for (int i = 5; i < 8; i++) {
+        tabuleiro[i][7] = 3; // Navio vertical na coluna H, linhas 6 a 8
+    }
+
     // Impressão do tabuleiro formatado
+
+    printf("*** Tabuleiro de Batalha Naval ***\n\n");
+    printf("**********Desafio Novato**********\n\n");
 
     // Impressão do cabeçalho com letras
     for (int i = 0; i < 10; i++) {
@@ -37,6 +49,7 @@ int main() {
             printf(" %d ", tabuleiro[i][j]);
         }
     }
+
 
 
    return 0;
