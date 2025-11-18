@@ -9,8 +9,8 @@
 // Função para inicializar o tabuleiro (vai se repetir mais tarde várias vezes, chamando a cada tentativa do jogador)
 
 void inicializarTabuleiro(int tabuleiro[LINHAS][COLUNAS]) {
-    int x[LINHAS];
-    char y[COLUNAS];
+    int x[LINHAS]; // Vetor para os números das linhas
+    char y[COLUNAS]; // Vetor para as letras das colunas
 
     for (int i = 0; i < LINHAS; i++) {
         x[i] = i + 1; // Preenche os números para as linhas
@@ -44,8 +44,12 @@ int main() {
     int tentativas = TENTATIVAS;
     int navios = NAVIOS;
     int tamanho_navio = TAMANHO_NAVIO;
+    char coluna;
+    int linha;
 
     // Impressão do tabuleiro em branco
+
+
 
     printf("*** Tabuleiro de Batalha Naval ***\n\n");
     printf("**********Desafio Novato**********\n\n");
@@ -54,12 +58,29 @@ int main() {
     printf("Boa sorte, comandante!\n\n");
 
 
+    for (int i = tentativas; i > 0; i--) {
+
     inicializarTabuleiro(tabuleiro);
 
+   
+
+    printf ("Você tem %d tentativas.\n", tentativas);
+    printf ("Insira as coordenadas para atacar (exemplo: A5): ");
+    scanf(" %c%d", &coluna, &linha);
+    tentativas--;
+
+ /*
+    // Verificação das coordenadas inseridas
+    if (coluna >= 'a' && coluna <= 'z') {
+        coluna = coluna - 'a' + 'A'; // Converte para maiúscula
+    }
+    if (coluna < 'A' || coluna >= 'A' + COLUNAS || linha < 1 || linha > LINHAS) {
+        printf("Coordenadas inválidas! Tente novamente.\n");
+        continue; // Pula para a próxima iteração do loop
+
+*/
+    }
 
     
-
-
-
    return 0;
 }
